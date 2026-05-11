@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
-
+import org.springframework.stereotype.Repository; 
+@Repository
 public interface LoanTypeRepository extends JpaRepository<LoanType, Long> {
 
     @Query(value = "SELECT * FROM loan_types", nativeQuery = true)
