@@ -1,3 +1,6 @@
+git add .
+git commit -m "Fix properties syntax and JPA auto-create"
+git push origin main
 # Stage 1: Build
 FROM maven:3.8.5-eclipse-temurin-17 AS build
 WORKDIR /app
