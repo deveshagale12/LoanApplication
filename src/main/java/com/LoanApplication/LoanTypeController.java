@@ -1,9 +1,8 @@
 package com.LoanApplication;
-
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
+import java.util.HashMap; // You likely need this too if you are creating new Maps
+import java.util.List;
+// You likely need this too if you are creating new Maps
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
