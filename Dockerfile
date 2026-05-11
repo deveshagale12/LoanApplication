@@ -23,4 +23,5 @@ EXPOSE 8080
 
 # 4. Use exec form for better signal handling (SIGTERM)
 # We still use sh -c to support the $PORT variable expansion
-ENTRYPOINT ["sh", "-c", "java -Xmx400m -Xms400m -jar app.jar --server.port=${PORT:-8080}"]
+#ENTRYPOINT ["sh", "-c", "java -Xmx400m -Xms400m -jar app.jar --server.port=${PORT:-8080}"]
+ENTRYPOINT ["sh", "-c", "java -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 -jar app.jar --server.port=${PORT:-8080}"]
