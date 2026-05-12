@@ -59,4 +59,10 @@ public class LoanController {
         response.put("message", "Loan record deleted successfully.");
         return ResponseEntity.ok(response);
     }
+
+     @GetMapping("/user/{userId}")
+    public ResponseEntity<List<Loan>> getLoansByUserId(@PathVariable Long userId) {
+        List<Loan> loans = loanService.getLoansByUserId(userId);
+        return ResponseEntity.ok(loans);
+    }
 }

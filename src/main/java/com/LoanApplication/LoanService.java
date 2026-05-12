@@ -146,4 +146,7 @@ public class LoanService {
             System.err.println("SMTP Error: Could not send email to " + toEmail + " - " + e.getMessage());
         }
     }
+     public List<Loan> getLoansByUserId(Long userId) {
+        return loanRepository.findByUserId(userId);
+    }
 }

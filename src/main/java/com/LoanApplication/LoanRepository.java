@@ -41,4 +41,6 @@ public interface LoanRepository extends JpaRepository<Loan, Long> {
         @Param("appDate") LocalDateTime appDate, 
         @Param("reason") String reason
     );
+        List<Loan> findByUserId(Long userId);
+
 }
