@@ -60,9 +60,10 @@ public class LoanController {
         return ResponseEntity.ok(response);
     }
 
-     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Loan>> getLoansByUserId(@PathVariable Long userId) {
-        List<Loan> loans = loanService.getLoansByUserId(userId);
-        return ResponseEntity.ok(loans);
-    }
+   @GetMapping("/users/{userId}")
+public ResponseEntity<List<Loan>> getLoansByUserId(@PathVariable Long userId) {
+    List<Loan> loans = loanService.getLoansByUserId(userId);
+    return ResponseEntity.ok(loans);
+}
+
 }
