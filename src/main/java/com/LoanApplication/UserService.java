@@ -61,4 +61,7 @@ public class UserService {
         }
         userRepository.deleteUserNative(id);
     }
+     public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 }

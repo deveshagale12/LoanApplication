@@ -3,6 +3,7 @@ package com.LoanApplication;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -56,4 +57,10 @@ public class UserController {
         response.put("message", "User account deleted successfully.");
         return ResponseEntity.ok(response);
     }
+     // GET /api/users
+	    @GetMapping("/users")
+	    public ResponseEntity<List<User>> getAllUsers() {
+	        List<User> users = userService.getAllUsers();
+	        return ResponseEntity.ok(users);
+	    }
 }
